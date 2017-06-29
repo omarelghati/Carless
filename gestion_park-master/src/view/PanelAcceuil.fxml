@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AcController">
+   <children>
+      <Accordion layoutY="59.0" prefHeight="231.0" prefWidth="205.0">
+        <panes>
+          <TitledPane accessibleRole="BUTTON" animated="false" prefHeight="110.0" prefWidth="205.0" text="Tableau de bord">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="203.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Ajouter un Véhicule">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="Ajouter" layoutX="14.0" layoutY="14.0" onAction="#AjouterAction" prefHeight="25.0" prefWidth="173.0" text="Ajouter" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane accessibleRole="BUTTON" animated="false" onMouseClicked="#methAddUser" text="Ajouter Utilisateur">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+            <TitledPane fx:id="graphe1" accessibleRole="BUTTON" onMouseClicked="#statistics" prefHeight="200.0" prefWidth="200.0" text="Statistiques" />
+        </panes>
+      </Accordion>
+      <ImageView fitHeight="596.0" fitWidth="1209.0" layoutX="205.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@premierePage.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lab1" alignment="CENTER" layoutX="382.0" layoutY="285.0" prefHeight="53.0" prefWidth="131.0" text="Label" textAlignment="CENTER" textFill="#daad03">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab4" alignment="CENTER" layoutX="311.0" layoutY="421.0" prefHeight="53.0" prefWidth="238.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font></Label>
+      <Label layoutX="398.0" layoutY="338.0" prefHeight="25.0" prefWidth="99.0" text="        mois " textFill="#daad03">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab2" alignment="CENTER" layoutX="748.0" layoutY="285.0" prefHeight="53.0" prefWidth="131.0" text="Label" textAlignment="CENTER" textFill="#daad03">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab3" alignment="CENTER" layoutX="1086.0" layoutY="281.0" prefHeight="53.0" prefWidth="131.0" text="Label" textAlignment="CENTER" textFill="#daad03">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="1102.0" layoutY="338.0" prefHeight="25.0" prefWidth="99.0" text="          Km " textFill="#daad03">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="764.0" layoutY="338.0" prefHeight="25.0" prefWidth="99.0" text="     l/100km" textFill="#daad03">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="355.0" layoutY="494.0" prefHeight="37.0" prefWidth="146.0" text="Véhicules" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab41" alignment="CENTER" layoutX="276.0" layoutY="554.0" prefHeight="73.0" prefWidth="92.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab42" alignment="CENTER" layoutX="382.0" layoutY="554.0" prefHeight="73.0" prefWidth="92.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab43" alignment="CENTER" layoutX="489.0" layoutY="554.0" prefHeight="73.0" prefWidth="92.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="276.0" layoutY="627.0" prefHeight="37.0" prefWidth="92.0" text="Voitures" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="382.0" layoutY="627.0" prefHeight="37.0" prefWidth="83.0" text="Camions" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="489.0" layoutY="627.0" prefHeight="37.0" prefWidth="92.0" text="Motos" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab5" alignment="CENTER" layoutX="680.0" layoutY="421.0" prefHeight="53.0" prefWidth="238.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="726.0" layoutY="494.0" prefHeight="37.0" prefWidth="146.0" text="En panne " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="647.0" layoutY="627.0" prefHeight="37.0" prefWidth="92.0" text="Voitures" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="753.0" layoutY="627.0" prefHeight="37.0" prefWidth="83.0" text="Camions" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="860.0" layoutY="627.0" prefHeight="37.0" prefWidth="92.0" text="Motos" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab51" alignment="CENTER" layoutX="647.0" layoutY="554.0" prefHeight="73.0" prefWidth="92.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab52" alignment="CENTER" layoutX="753.0" layoutY="554.0" prefHeight="73.0" prefWidth="92.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab53" alignment="CENTER" layoutX="860.0" layoutY="554.0" prefHeight="73.0" prefWidth="92.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab6" alignment="CENTER" layoutX="1053.0" layoutY="421.0" prefHeight="53.0" prefWidth="238.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1099.0" layoutY="494.0" prefHeight="37.0" prefWidth="146.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1013.0" layoutY="627.0" prefHeight="37.0" prefWidth="92.0" text="Essence" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1119.0" layoutY="627.0" prefHeight="37.0" prefWidth="83.0" text="Diesel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1226.0" layoutY="627.0" prefHeight="37.0" prefWidth="92.0" text="Motos" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab61" alignment="CENTER" layoutX="1013.0" layoutY="554.0" prefHeight="73.0" prefWidth="92.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab62" alignment="CENTER" layoutX="1119.0" layoutY="554.0" prefHeight="73.0" prefWidth="92.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab63" alignment="CENTER" layoutX="1226.0" layoutY="554.0" prefHeight="73.0" prefWidth="92.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Pane layoutX="205.0" layoutY="58.0" prefHeight="46.0" prefWidth="1194.0" style="-fx-background-color: #daad03;">
+         <children>
+            <Label fx:id="pageActuelle" layoutX="14.0" layoutY="-2.0" prefHeight="46.0" prefWidth="401.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="55.0" fitWidth="82.0" layoutX="62.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="buttonLogout" layoutX="1288.0" layoutY="14.0" onAction="#logout" prefHeight="33.0" prefWidth="70.0" style="-fx-background-color: #FFA07A;" text="Logout">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <Label fx:id="labUser" layoutX="988.0" prefHeight="53.0" prefWidth="313.0" text="Bonjour ">
+         <font>
+            <Font name="Centaur" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="55.0" fitWidth="360.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="1093.0" layoutY="486.0" prefHeight="37.0" prefWidth="146.0" text="Voitures" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

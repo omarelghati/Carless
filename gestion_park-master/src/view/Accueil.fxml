@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccueilController">
+   <children>
+      <Pane layoutX="200.0" layoutY="129.0" prefHeight="512.0" prefWidth="984.0">
+         <children>
+            <TableView fx:id="tableVehicule" layoutX="4.0" layoutY="59.0" prefHeight="547.0" prefWidth="1180.0">
+               <columns>
+                  <TableColumn fx:id="colimmatriculation" minWidth="0.0" prefWidth="196.00001525878906" text="Immatriculation" />
+                  <TableColumn fx:id="coldateEntree" prefWidth="177.0" text="Date d'entree" />
+                  <TableColumn fx:id="coldateSortie" prefWidth="142.0" text="Date de sortie" />
+                  <TableColumn fx:id="colmarque" prefWidth="166.0" text="Marque" />
+                  <TableColumn fx:id="colmodele" prefWidth="149.0" text="Modele" />
+                  <TableColumn fx:id="colcarburant" minWidth="0.0" prefWidth="185.0" text="Carburant" />
+                  <TableColumn fx:id="coletat" prefWidth="177.0" text="Etat" />
+               </columns>
+            </TableView>
+            <ToolBar layoutX="4.0" layoutY="24.0" prefHeight="29.0" prefWidth="200.0">
+               <items>
+                  <TextField fx:id="SearchImmatriculation" onAction="#loadDataSearch" prefHeight="25.0" prefWidth="187.0" promptText="Exemple: 123456789" />
+               </items>
+            </ToolBar>
+            <ToolBar layoutX="204.0" layoutY="24.0" prefHeight="35.0" prefWidth="176.0">
+               <items>
+                  <TextField fx:id="SearchDE" onAction="#loadDataSearch" prefHeight="25.0" prefWidth="164.0" promptText="Exemple: 2017-01-01" />
+               </items>
+            </ToolBar>
+            <ToolBar layoutX="380.0" layoutY="24.0" prefHeight="35.0" prefWidth="146.0">
+               <items>
+                  <TextField fx:id="SearchDS" onAction="#loadDataSearch" prefHeight="25.0" prefWidth="125.0" promptText="Exemple: 2017-01-01" />
+               </items>
+            </ToolBar>
+            <ToolBar layoutX="525.0" layoutY="24.0" prefHeight="35.0" prefWidth="164.0">
+               <items>
+                  <TextField fx:id="SearchMarque" onAction="#loadDataSearch" prefHeight="25.0" prefWidth="151.0" promptText="Exemple: Renault" />
+               </items>
+            </ToolBar>
+            <ToolBar layoutX="840.0" layoutY="24.0" prefHeight="35.0" prefWidth="186.0">
+               <items>
+                  <TextField fx:id="SearchCarburant" onAction="#loadDataSearch" prefHeight="25.0" prefWidth="166.0" promptText="Exemple: Diesel/Essence" />
+               </items>
+            </ToolBar>
+            <ToolBar layoutX="689.0" layoutY="24.0" prefHeight="35.0" prefWidth="151.0">
+               <items>
+                  <TextField fx:id="SearchModel" onAction="#loadDataSearch" prefHeight="25.0" prefWidth="135.0" promptText="Exemple: Megane" />
+               </items>
+            </ToolBar>
+         </children>
+      </Pane>
+      <Pane layoutY="129.0" prefHeight="512.0" prefWidth="200.0" />
+      <Accordion layoutX="-2.0" layoutY="61.0" prefHeight="231.0" prefWidth="205.0">
+         <panes>
+            <TitledPane fx:id="ac" accessibleRole="BUTTON" animated="false" onMouseClicked="#Retour" prefHeight="110.0" prefWidth="205.0" text="Tableau de bord">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="203.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Ajouter un Véhicule">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="Ajouter" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="173.0" text="Ajouter" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane accessibleRole="BUTTON" animated="false" onMouseClicked="#method" text="Ajouter Utilisateur">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Statistiques">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Pane layoutX="203.0" layoutY="61.0" prefHeight="46.0" prefWidth="1194.0" style="-fx-background-color: #daad03;">
+         <children>
+            <Label fx:id="pageActuelle" layoutX="14.0" layoutY="-2.0" prefHeight="46.0" prefWidth="382.0" text="Ajouter Véhicule">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="203.0" layoutY="106.0" prefHeight="46.0" prefWidth="1194.0" style="-fx-background-color: #303030;">
+         <children>
+            <JFXButton fx:id="buttonExcel" ellipsisString="" layoutX="57.0" layoutY="9.0" onAction="#exporter" prefHeight="29.0" prefWidth="94.0" style="-fx-background-color: #ffffff;" text="        Export" textFill="#222121">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="buttonAddVehicule" layoutX="14.0" layoutY="9.0" onAction="#ajouterVehicule" prefHeight="25.0" prefWidth="28.0" style="-fx-background-color: #ffffff;" text="+">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="buttonLoad" layoutX="1060.0" layoutY="11.0" onAction="#loadData" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: #ffffff;" text="Refresh" />
+            <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="57.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@excel.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="importBtn" ellipsisString="" layoutX="180.0" layoutY="10.0" onAction="#importer" prefHeight="29.0" prefWidth="107.0" style="-fx-background-color: #ffffff;" text="       Importer" textFill="#222121">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="181.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@excel.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXButton fx:id="buttonLogout" layoutX="1288.0" layoutY="14.0" onAction="#logout" prefHeight="33.0" prefWidth="70.0" style="-fx-background-color: #FFA07A;" text="Logout">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <ToolBar layoutX="1225.0" layoutY="153.0" prefHeight="35.0" prefWidth="157.0">
+         <items>
+            <TextField fx:id="SearchEtat" onAction="#loadDataSearch" prefHeight="25.0" prefWidth="143.0" promptText="Exemple: Disponibe/En Panne" />
+         </items>
+      </ToolBar>
+      <Label fx:id="labUser" layoutX="987.0" layoutY="7.0" prefHeight="53.0" prefWidth="291.0" text="Bonjour ">
+         <font>
+            <Font name="Centaur" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="55.0" fitWidth="360.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

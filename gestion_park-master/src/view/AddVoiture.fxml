@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="542.0" prefWidth="707.0" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterVoiture">
+   <children>
+      <JFXTextField fx:id="fieldImmatriculation" focusColor="#daad03" layoutX="83.0" layoutY="27.0" maxWidth="205.0" minWidth="205.0" prefHeight="31.0" prefWidth="205.0" promptText="Immatriculation" unFocusColor="#daad03" />
+      <JFXTextField fx:id="fieldMarque" focusColor="#daad03" layoutX="84.0" layoutY="203.0" maxWidth="205.0" minWidth="205.0" prefHeight="31.0" prefWidth="205.0" promptText="Marque " unFocusColor="#daad03" />
+      <JFXTextField fx:id="fieldModele" focusColor="#daad03" layoutX="83.0" layoutY="256.0" maxWidth="205.0" minWidth="205.0" prefHeight="31.0" prefWidth="205.0" promptText="Modèle" unFocusColor="#daad03" />
+      <JFXButton fx:id="add" layoutX="240.0" layoutY="489.0" onAction="#addVoiture" prefHeight="25.0" prefWidth="228.0" style="-fx-background-color: #daad03;" text="Save" textFill="WHITE" />
+      <JFXComboBox fx:id="fieldCarburant" layoutX="86.0" layoutY="327.0" prefHeight="25.0" prefWidth="198.0" promptText="Carburant" style="-fx-background-color: #daad03;" />
+      <DatePicker fx:id="fieldEntree" layoutX="86.0" layoutY="87.0" prefHeight="25.0" prefWidth="198.0" promptText="Date d'entrée" />
+      <DatePicker fx:id="fieldSortie" layoutX="87.0" layoutY="152.0" prefHeight="25.0" prefWidth="198.0" promptText="Date de sortie" />
+      <JFXTextField fx:id="pfiscal" focusColor="#daad03" layoutX="425.0" layoutY="28.0" maxWidth="205.0" minWidth="192.0" prefHeight="31.0" prefWidth="205.0" promptText="Puissance Fiscal" unFocusColor="#daad03" />
+      <JFXTextField fx:id="emission" focusColor="#daad03" layoutX="425.0" layoutY="219.0" maxWidth="205.0" minWidth="192.0" prefHeight="31.0" prefWidth="205.0" promptText="Emission CO2" unFocusColor="#daad03" />
+      <JFXTextField fx:id="kilometrage" focusColor="#daad03" layoutX="426.0" layoutY="287.0" maxWidth="205.0" minWidth="192.0" prefHeight="31.0" prefWidth="205.0" promptText="kilometrage" unFocusColor="#daad03" />
+      <JFXTextField fx:id="consommation" focusColor="#daad03" layoutX="425.0" layoutY="352.0" maxWidth="205.0" minWidth="192.0" prefHeight="31.0" prefWidth="205.0" promptText="consommation" unFocusColor="#daad03" />
+      <JFXTextField fx:id="age" focusColor="#daad03" layoutX="426.0" layoutY="413.0" maxWidth="205.0" minWidth="192.0" prefHeight="31.0" prefWidth="205.0" promptText="age" unFocusColor="#daad03" />
+      <JFXComboBox fx:id="comboetat" layoutX="86.0" layoutY="388.0" prefHeight="25.0" prefWidth="198.0" promptText="Etat" style="-fx-background-color: #daad03;" />
+      <DatePicker fx:id="fieldAssExp" layoutX="429.0" layoutY="154.0" prefHeight="25.0" prefWidth="198.0" promptText="Date d'expiration d'assurance" />
+      <DatePicker fx:id="fieldAssDebut" layoutX="428.0" layoutY="92.0" prefHeight="25.0" prefWidth="198.0" promptText="Date de début d'assurance" />
+   </children>
+</AnchorPane>

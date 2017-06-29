@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Statistics">
+   <children>
+      <Pane layoutY="129.0" prefHeight="512.0" prefWidth="200.0" />
+      <Accordion layoutX="-2.0" layoutY="61.0" prefHeight="231.0" prefWidth="205.0">
+         <panes>
+            <TitledPane fx:id="ac" accessibleRole="BUTTON" animated="false" onMouseClicked="#Retour" prefHeight="110.0" prefWidth="205.0" text="Tableau de bord">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="203.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Ajouter un Véhicule">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="Ajouter" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="173.0" text="Ajouter" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Ajouter Utilisateur">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Statistiques">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Pane layoutX="203.0" layoutY="61.0" prefHeight="46.0" prefWidth="1194.0" style="-fx-background-color: #daad03;">
+         <children>
+            <JFXBadge />
+            <JFXButton fx:id="vehiculeCum" layoutX="786.0" layoutY="9.0" onAction="#graphe2" style="-fx-background-color: #303030;" text="Vehicule cum" textFill="#daad03" />
+            <JFXButton fx:id="vehiculesI_O" layoutX="896.0" layoutY="9.0" onAction="#graphe1" style="-fx-background-color: #303030;" text="Vehicules I/O" textFill="#daad03" />
+            <Label fx:id="pageActuelle" layoutX="14.0" layoutY="-2.0" prefHeight="46.0" prefWidth="232.0" text="Statistiques">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="203.0" layoutY="106.0" prefHeight="46.0" prefWidth="1194.0" style="-fx-background-color: #303030;" />
+      <JFXButton fx:id="buttonLogout" layoutX="1308.0" layoutY="17.0" prefHeight="33.0" prefWidth="70.0" style="-fx-background-color: #FFA07A;" text="Logout" />
+      <AnchorPane layoutX="203.0" layoutY="127.0" prefHeight="573.0" prefWidth="1194.0" style="-fx-background-color: #303030;">
+         <children>
+            <BarChart fx:id="graphe" animated="false" layoutX="4.0" layoutY="30.0" legendSide="TOP" prefHeight="543.0" prefWidth="1084.0" style="-fx-background-color: #303030;">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <Label fx:id="titreGraphe" layoutX="400.0" style="-fx-font-size: 20;" textAlignment="CENTER" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="55.0" fitWidth="360.0" layoutX="3.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

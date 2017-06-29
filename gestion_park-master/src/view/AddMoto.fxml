@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="542.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterMoto">
+   <children>
+      <JFXTextField fx:id="fieldImmatriculation" layoutX="32.0" layoutY="33.0" maxWidth="205.0" minWidth="205.0" prefHeight="31.0" prefWidth="205.0" promptText="Immatriculation" />
+      <JFXTextField fx:id="fieldMarque" layoutX="32.0" layoutY="239.0" maxWidth="205.0" minWidth="205.0" prefHeight="31.0" prefWidth="205.0" promptText="Marque " />
+      <JFXTextField fx:id="fieldModele" layoutX="32.0" layoutY="297.0" maxWidth="205.0" minWidth="205.0" prefHeight="31.0" prefWidth="205.0" promptText="Modèle" />
+      <JFXButton fx:id="add" layoutX="412.0" layoutY="229.0" onAction="#addMoto" prefHeight="25.0" prefWidth="228.0" text="Save" />
+      <JFXComboBox fx:id="comboetat" layoutX="39.0" layoutY="380.0" prefHeight="25.0" prefWidth="192.0" promptText="Etat" />
+      <DatePicker fx:id="fieldEntree" layoutX="35.0" layoutY="106.0" />
+      <DatePicker fx:id="fieldSortie" layoutX="35.0" layoutY="178.0" />
+      <ComboBox fx:id="assurance" layoutX="39.0" layoutY="461.0" prefHeight="25.0" prefWidth="192.0" promptText="Assurance" />
+   </children>
+</AnchorPane>
